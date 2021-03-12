@@ -14,15 +14,6 @@ public class Elf extends Figure{
          this.attackBox = 3;
          this.speed     = 3;
      }
-     
-    private int random() {
-        Random random = new Random();
-        int rand = random.nextInt(5);
-        while (rand == 2) {
-            rand = random.nextInt(5);
-        }
-        return rand;
-    }
 
     public void render(Graphics g) {
 
@@ -38,6 +29,15 @@ public class Elf extends Figure{
         g.setColor(Color.RED);
         g.fillOval((elf3*100) + 15, 515,  70, 70);
         g.fillOval((elf4*100) + 15, 615,  70, 70);
+    }
+     
+      private int random() {
+        Random random = new Random();
+        int rand = random.nextInt(5);
+        while (rand == 2) {
+            rand = random.nextInt(5);
+        }
+        return rand;
     }
 
 }
