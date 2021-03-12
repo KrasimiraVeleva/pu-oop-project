@@ -15,6 +15,10 @@ public class Knight extends Figure {
         this.speed     = 1;
     }
 
+    /**
+     * Метод изобразяващ рицарите на игралната дъска
+     * @param g Graphics object
+     */
     public void render(Graphics g) {
 
         int knight1 = random();
@@ -29,9 +33,12 @@ public class Knight extends Figure {
         g.setColor(Color.ORANGE);
         g.fillOval((knight3*100) + 15, 515,  70, 70);
         g.fillOval((knight4*100) + 15, 615,  70, 70);
-
     }
 
+    /**
+     * Метод изобразяващ фигурите на случаен принцип
+     * @return rand
+     */
     private int random() {
         Random random = new Random();
         int rand = random.nextInt(5);
